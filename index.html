@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Game</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whack-a-Drop!</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Welcome to the Charity Water Game Prototype</h1>
-    <script src="script.js"></script>
+
+  <h1>💧 Wack A Drop! !</h1>
+  <p>Click the water drops to conserve water and earn points! Avoid trash! <br> Sponsored by Charity - Water</p>
+
+  <div id="lives">
+    Lives:
+    <span class="life">💧</span>
+    <span class="life">💧</span>
+    <span class="life">💧</span>
+  </div>
+
+  <button onclick="startGame()">Start / Reset</button>
+
+  <div id="scoreboard">
+    Score: <span id="score">0</span> |
+    Time Left: <span id="time">30</span>s
+  </div>
+
+  <div id="game">
+    <div class="hole"><div class="drop"></div><div class="trash"></div></div>
+    <div class="hole"><div class="drop"></div><div class="trash"></div></div>
+    <div class="hole"><div class="drop"></div><div class="trash"></div></div>
+    <div class="hole"><div class="drop"></div><div class="trash"></div></div>
+    <div class="hole"><div class="drop"></div><div class="trash"></div></div>
+    <div class="hole"><div class="drop"></div><div class="trash"></div></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

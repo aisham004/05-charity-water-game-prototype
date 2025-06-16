@@ -13,3 +13,129 @@ Secondary Colors:
 - Pink:       #F16061
 
 */
+
+body {
+  font-family: 'Georgia', serif;
+  text-align: center;
+  background-color: #FFC907;
+  padding: 20px;
+}
+
+h1 {
+  color: #2E9DF7;
+}
+
+#lives {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.life {
+  margin: 0 5px;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.hole {
+  width: 100px;
+  height: 100px;
+  background-color: #8BD1CB;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.drop, .trash {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.drop {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/036/255/109/non_2x/blue-water-drop-cartoon-icon-free-png.png');
+  background-size: cover;
+}
+
+.trash {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/5198/5198836.png');
+  background-size: cover;
+}
+
+#scoreboard {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4FCB53;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #4FCB53;
+}
+
+/* Confetti Effect Styles */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.confetti {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  animation: confetti-fall 3s linear infinite;
+}
+
+.confetti:nth-child(1) { background-color: #FFC907; left: 10%; animation-delay: 0s; }
+.confetti:nth-child(2) { background-color: #2E9DF7; left: 20%; animation-delay: 0.1s; }
+.confetti:nth-child(3) { background-color: #8BD1CB; left: 30%; animation-delay: 0.2s; }
+.confetti:nth-child(4) { background-color: #4FCB53; left: 40%; animation-delay: 0.3s; }
+.confetti:nth-child(5) { background-color: #FF902A; left: 50%; animation-delay: 0.4s; }
+.confetti:nth-child(6) { background-color: #F5402C; left: 60%; animation-delay: 0.5s; }
+.confetti:nth-child(7) { background-color: #159A48; left: 70%; animation-delay: 0.6s; }
+.confetti:nth-child(8) { background-color: #F16061; left: 80%; animation-delay: 0.7s; }
+.confetti:nth-child(9) { background-color: #FFC907; left: 90%; animation-delay: 0.8s; }
+.confetti:nth-child(10) { background-color: #2E9DF7; left: 15%; animation-delay: 0.9s; }
+.confetti:nth-child(11) { background-color: #8BD1CB; left: 25%; animation-delay: 1s; }
+.confetti:nth-child(12) { background-color: #4FCB53; left: 35%; animation-delay: 1.1s; }
+.confetti:nth-child(13) { background-color: #FF902A; left: 45%; animation-delay: 1.2s; }
+.confetti:nth-child(14) { background-color: #F5402C; left: 55%; animation-delay: 1.3s; }
+.confetti:nth-child(15) { background-color: #159A48; left: 65%; animation-delay: 1.4s; }
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+
