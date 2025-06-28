@@ -5,11 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Whack-a-Drop!</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <h1>💧 Wack A Drop! !</h1>
-  <p>Click the water drops to conserve water and earn points! Avoid trash! <br> Sponsored by Charity - Water</p>
+  <h1>💧 Whack-A-Drop!</h1>
+  <p>Click the water drops to conserve water and earn points! Avoid trash! <br> Sponsored by Charity: Water</p>
+
+  <label for="difficulty">Choose Difficulty: </label>
+  <select id="difficulty">
+    <option value="easy">Easy</option>
+    <option value="normal" selected>Normal</option>
+    <option value="hard">Hard</option>
+  </select>
+
+  <br /><br />
+  <button onclick="startGame()" id="startBtn">Start / Reset</button>
+  <button onclick="togglePause()" id="pauseBtn" disabled>Pause</button>
 
   <div id="lives">
     Lives:
@@ -17,8 +29,6 @@
     <span class="life">💧</span>
     <span class="life">💧</span>
   </div>
-
-  <button onclick="startGame()">Start / Reset</button>
 
   <div id="scoreboard">
     Score: <span id="score">0</span> |
@@ -33,6 +43,22 @@
     <div class="hole"><div class="drop"></div><div class="trash"></div></div>
     <div class="hole"><div class="drop"></div><div class="trash"></div></div>
   </div>
+
+  <!-- Modal -->
+  <div id="endModal" class="modal">
+    <div class="modal-content">
+      <h2 id="modalTitle"></h2>
+      <p id="modalMessage"></p>
+      <button onclick="startGame()">Play Again</button>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Learn more about water conservation at
+      <a href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer">charity : water</a>
+    </p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
